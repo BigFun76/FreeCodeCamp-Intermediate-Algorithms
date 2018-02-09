@@ -1,1 +1,1 @@
-# FreeCodeCamp-SumAllNumbers
+# FreeCodeCamp-Intermediate-Algorithms
