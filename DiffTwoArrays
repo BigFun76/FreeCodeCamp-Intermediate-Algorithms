@@ -1,7 +1,27 @@
 
 function diffArray(arr1, arr2) {
   var newArr = [];
-  // Same, same; but different.
+    
+  
+  function notInSecond(first, second) {
+  
+    // Loop through length of the first array
+    for (var i=0;i<first.length;i++) {
+      //determine if any elements aren't in the second array
+      if (second.indexOf(first[i]) === -1) {
+        // Push any elements that aren't in the second array to newArr
+        newArr.push(first[i]);
+      }
+    }
+  }
+ 
+  // Run function on both arr1 and arr2
+  
+  notInSecond(arr1, arr2);
+  notInSecond(arr2, arr1);
+
+ 
+  // newArr should only be populated with elements unique to either array
   return newArr;
 }
 
