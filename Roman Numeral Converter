@@ -1,8 +1,21 @@
 
+var convertToRoman = function(num) {
 
-function convertToRoman(num) {
- return num;
-}
+ var numericalEQ = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+ 
+ var romanNums = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+  
+  var convertedNum = '';
 
+  for (var index = 0; index < numericalEQ.length; index++) {
+    while (numericalEQ[index] <= num) {
+      convertedNum += romanNums[index];
+      num -= numericalEQ[index];
+    }
+  }
+
+  return convertedNum;
+};
+
+// test here
 convertToRoman(36);
-
