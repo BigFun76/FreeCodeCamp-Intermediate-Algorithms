@@ -1,0 +1,25 @@
+function pairElement(str) {
+  
+  var keyPairs = ["ATCG"];
+  var newArray = [];
+  
+  for (i=0;i<str.length;i++) {
+    switch (str[i]){
+      case "A":
+        newArray.push(["A", "T"]);
+        break;
+      case "T":
+        newArray.push(["T", "A"]);
+        break;
+      case "C":
+        newArray.push(["C", "G"]);
+        break;
+      case "G":
+        newArray.push(["G", "C"]); 
+        break;
+  }
+  }
+  return newArray;
+}
+
+pairElement("ATCGA");
