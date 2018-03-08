@@ -1,0 +1,25 @@
+function fearNotLetter(str) {
+//split str at each character
+  str=str.split("");
+  //create a string to reference
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  //split the reference string at each character
+  alphabet = alphabet.split("");
+  //if the first letter of str isn't "a" then we return undefined
+  if (str[0] != 'a') {
+  return undefined;
+  }else {
+  //iterate through the str one letter at a time
+    for (i=0;i<str.length;i++){
+    //if str is not in the reference alphabet, we return the missing letter
+    if (str[i]!=alphabet[i]){
+     return alphabet[i];
+    }
+  }
+  }
+  
+  return str;
+}
+
+fearNotLetter("abcdefghjklmno");
+
