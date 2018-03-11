@@ -1,0 +1,15 @@
+function convertHTML(str) {
+  
+  //var seperate = str.split(" ");
+  var newString="";
+  
+  newString = str.replace(/&/g, "&amp;");    
+  newString = newString.replace(/</g, "&lt;"); 
+  newString = newString.replace(/>/g, "&gt;");
+  newString = newString.replace(/"/g, "&quot;");
+  newString = newString.replace(/'/g, "&apos;");
+   
+  return newString;
+}
+
+convertHTML("Dolce & Gabbana");
