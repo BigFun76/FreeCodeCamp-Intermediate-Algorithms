@@ -1,0 +1,17 @@
+function spinalCase(str) {
+  
+  var newString = "";
+  var seperate = "";
+  var lower = "";
+  
+  newString = str.replace(/-|_/g, " ");
+  seperate = newString.replace(/([a-z])([A-Z])/g, '$1-$2');
+  lower = seperate.replace(/ /g, "-").toLowerCase();
+  
+  
+  
+  return lower;
+}
+
+
+spinalCase("thisIsSpinalTap");
