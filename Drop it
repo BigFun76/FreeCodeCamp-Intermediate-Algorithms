@@ -1,1 +1,13 @@
 
+function dropElements(arr, func) {
+  // Drop them elements.
+  var newArray=arr.filter(func);
+  
+while (!func(arr[0]))
+  arr.shift();
+  
+  return arr;
+}
+
+
+dropElements([0, 1, 0, 1], function(n) {return n ===1; });
