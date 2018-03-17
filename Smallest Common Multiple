@@ -1,0 +1,49 @@
+function smallestCommons(arr) {
+  //new array to push range elements into
+  var newArray = [];
+  //lcm variable
+  var x = 0;
+  //multiplier to itierate through
+  var y = 1;
+  //used to itierate through the newArray elems
+  var j;
+  
+  //return the largest number first always
+  arr.sort(function(a, b) {
+    return b - a;
+  });
+  //populate new array with the range of numbers, largest to smallest
+  for (var i = arr[0]; i >= arr[1]; i--) {
+    newArray.push(i);
+    }
+    
+  //continue this loop until it successfully reaches the end of the array length
+  do {
+    //largest 2 numbers multiplied with each other are the smallest possible lcm
+  x = newArray[0] * y * newArray[1];
+    //iterate through the length of the array
+    for (j=2; j < newArray.length; j++){
+      //determine if each element of the array is a multiple of x
+      if (x % newArray[j] !== 0){
+        //if not, break and add one to the multiplier
+        break;
+      }
+    }
+     y++;
+  }
+  //finish the loop when it has successfully reached the end of the array length
+   while (j !== newArray.length);
+     
+  
+  
+    
+  
+
+
+  //return the lcm
+return x;
+}
+
+smallestCommons([1,5]);
+
+
