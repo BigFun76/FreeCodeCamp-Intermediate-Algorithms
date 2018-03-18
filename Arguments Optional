@@ -1,0 +1,21 @@
+function addTogether() {  
+ 
+var a = arguments[0];
+var b = arguments[1];
+  
+return typeof b === 'number' ?
+    a + b : arguments.length !== 2 ? typeof a === 'number' ? 
+  function(arg2){
+    return typeof arg2 !== 'number' ?
+      undefined :
+    a + arg2;} :   
+    undefined : 
+    undefined;
+
+
+  
+
+
+}
+
+addTogether(2,3);
