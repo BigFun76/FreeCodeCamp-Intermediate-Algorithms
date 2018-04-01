@@ -1,1 +1,1 @@
-# FreeCodeCamp-Intermediate-Algorithms
+# FreeCodeCamp-Intermediate and Advanced-Algorithms
